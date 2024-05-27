@@ -1,5 +1,7 @@
+
 h1{
-    color: red;
+    color: rgb(234, 10, 10);
+    text-decoration: none;
     position: absolute;
     top: 13%;
     left: 50%;
@@ -9,6 +11,12 @@ h1{
 
 .login-container{
     background-color: white;
+    position: absolute;
+    top: 1%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    text-align: center;
+    
 }
 
 

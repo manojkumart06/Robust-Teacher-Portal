@@ -1,0 +1,113 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.nav-logo {
+  letter-spacing: 1px;
+  margin-left: 20px;
+  color: rgb(234, 10, 10);
+  text-decoration: none;
+}
+
+.nav-links {
+  margin-right: 30px;
+  display: flex;
+  gap: 40px;
+}
+
+.nav-link {
+  color: black;
+  text-decoration: none;
+}
+
+.table-container{
+  margin: 30px;
+  background-color: #fff;
+}
+
+.table-head .table-cell {
+  position: relative;
+  padding: 20px;
+  height: 50%;
+  color: #949292;
+  font-weight: 600;
+}
+
+.table-head .marks-cell{
+  padding-left: 50px;
+}
+
+.table-head .table-cell::after {
+  content: '';
+  position: absolute;
+  top: 10px; 
+  right: 0;
+  width: 1px; 
+  height: 40px; 
+  background-color: #ccc; 
+}
+
+.table-body .table-cell{
+  color: rgb(58, 57, 57);
+  font-weight: 600;
+}
+
+.table-body .table-cell .student-name{
+  display: flex;
+  align-items: center;
+}
+
+.table-body .subject-cell{
+    padding-left: 20px;
+    width: 600px;
+}
+
+.table-body .marks-cell{
+  padding-left: 60px;
+}
+
+.options-popover {
+  width: 100px;
+  padding: 5px;
+}
+
+.options-popover .options-button {
+  display: flexbox;
+  justify-content: left;
+  color: rgb(58, 57, 57);
+  text-transform: none;
+  font-weight: 600;
+}
+
+.add-btn button{
+  margin-top: 30px;
+  margin-right: 88%;
+  color: #fff;
+  background-color: black;
+  text-transform: none;
+  border-radius: 1px;
+  padding: 10px;
+  width: 150px;
+}
+
+.add-btn button:hover{
+  background-color: rgb(36, 34, 34);
+}
+
+@media screen and (max-width: 88px ) {
+  .add-btn button {
+    margin-right: 65%; 
+  }
+}
+
+@media screen and (max-width: 400px ) {
+  .add-btn button {
+    margin-right: 85%; 
+  }
+}
