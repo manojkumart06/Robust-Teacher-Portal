@@ -1,10 +1,16 @@
-import { ADD_DETAILS, EDIT_DETAILS, DELETE_DETAILS } from '../actions/studentActions';
+import { ADD_DETAILS, EDIT_DETAILS, DELETE_DETAILS } from './studentAction';
 
 const initialState = {
-  students: []
-};
+    students: [
+      { name: 'John Doe', subject: 'Math', marks: 85 },
+      { name: 'Jane Smith', subject: 'Science', marks: 92 },
+      { name: 'Alice Johnson', subject: 'History', marks: 78 }
+    ]
+  };
+  
 
 const studentReducer = (state = initialState, action) => {
+ 
   switch (action.type) {
     case ADD_DETAILS:
       return {
@@ -12,20 +18,24 @@ const studentReducer = (state = initialState, action) => {
         students: [...state.students, action.payload]
       };
 
-    case EDIT_DETAILS:
-      return {
-        ...state,
-        students: state.students.map((student, index) =>
-          index === action.payload.index ? { ...student, ...action.payload.details } : student
-        )
-      };
+      case EDIT_DETAILS:
+        const updatedStudents = state.students.map((student, index) => {
+          if (index === action.payload.index) {
+            console.log("Updating student:", student);
+            console.log("With details:", action.payload.details);
+          }
+          return index === action.payload.index ? { ...student, ...action.payload.details } : student;
+        });
+        console.log("Updated students array:", updatedStudents);
+        return {
+          ...state,
+          students: updatedStudents
+        };
 
     case DELETE_DETAILS:
-      state.students.splice(action.index,1);
       return {
         ...state,
-        students : [...state.students]
-        //students: state.students.filter((_, index) => index !== action.payload)
+        students: state.students.filter((_, index) => index !== action.payload)
       };
 
     default:
