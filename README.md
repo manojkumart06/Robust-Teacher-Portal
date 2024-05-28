@@ -8,7 +8,7 @@ This project aims to create a robust teacher portal using React.js, providing fe
 - [Usage](#usage)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Folder Structure](#folder-structure)
+- [Live Demo](#Live Demo)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -17,23 +17,25 @@ This project aims to create a robust teacher portal using React.js, providing fe
 To run this application locally, follow these steps:
 
 1. Clone the repository:
-  - git clone <https://github.com/manojkumart06/Robust-Teacher-Portal>
+    - git clone <https://github.com/manojkumart06/Robust-Teacher-Portal>
 
 2. Navigate to the project directory:
-  - cd teacherportal
+    - cd teacherportal
 
 3. Install dependencies:
-  - npm install
+    - npm install
 
 4. Start the development server:
-  - npm start
+    - npm start
 
 5. Open http://localhost:8000 to view it in the browser.(use respective port number)
 
 6. Use following hardcoded username and password for login
 
     { username: 'user1', password: 'password1' }
+   
     { username: 'user2', password: 'password2' }
+   
     { username: 'user3', password: 'password3' }
 
 ## Usage
@@ -74,23 +76,8 @@ Upon running the application, you will encounter a login screen where you can in
     - Material-UI
     - React Lazy Load
 
-## Folder Structure
-teacherportal/
-  ├── public/
-  ├── src/
-  │   ├── components/
-  │   │   ├── Login/
-  │   │   ├── Home/
-  │   │   ├── Error/
-  │   │   ├── Modal/
-  │   ├── redux/
-  │   │   ├── actions/
-  │   │   ├── reducers/
-  │   │   ├── store/
-  │   ├── App.js
-  │   ├── index.js
-  ├── package.json
-  ├── README.md
+## Live Demo
+You can try the live [here](https://robustteacherportal.netlify.app/).
 
 ## Contributing
 
