@@ -76,7 +76,7 @@ Upon running the application, you will encounter a login screen where you can in
     - Material-UI
     - React Lazy Load
 
-## Live Demo
+## LiveDemo
 You can try the live [here](https://robustteacherportal.netlify.app/).
 
 ## Contributing
