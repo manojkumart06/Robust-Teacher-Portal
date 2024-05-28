@@ -1,6 +1,6 @@
 import { ADD_DETAILS, EDIT_DETAILS, DELETE_DETAILS } from './studentAction';
 
-// Initial state with a predefined list of students
+// Initial state with a some of predefined list of students
 const initialState = {
   students: [
     { name: "Sean Abot", subject: "Maths", marks: 77 },

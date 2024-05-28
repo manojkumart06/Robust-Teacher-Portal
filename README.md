@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+# Teacher Portal with React.js
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project aims to create a robust teacher portal using React.js, providing features such as a login screen, a home screen displaying student listings, and the ability to add new students. It utilizes modern UI frameworks like Material-UI for responsive design and efficient state management with Redux. Additionally, it implements extra features like code splitting, search functionality, and React lazy loading for improved performance.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Folder Structure](#folder-structure)
+- [Contributing](#contributing)
+- [License](#license)
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To run this application locally, follow these steps:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone the repository:
+  - git clone <https://github.com/manojkumart06/Robust-Teacher-Portal>
 
-### `npm test`
+2. Navigate to the project directory:
+  - cd teacherportal
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Install dependencies:
+  - npm install
 
-### `npm run build`
+4. Start the development server:
+  - npm start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+5. Open http://localhost:8000 to view it in the browser.(use respective port number)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+6. Use following hardcoded username and password for login
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    { username: 'user1', password: 'password1' }
+    { username: 'user2', password: 'password2' }
+    { username: 'user3', password: 'password3' }
 
-### `npm run eject`
+## Usage
+Upon running the application, you will encounter a login screen where you can input your username and password. After successful authentication, you'll be redirected to the home screen, which also serves as the student listing screen. From here, you can view a list of students along with their Name, Subject Name, and Marks. You can also add new students by clicking on the "Add Student" button, which opens a popup/modal for entering student details and also Edit/Delete actions also can be performed.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Features
+1. Login Screen:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    - Input fields for username and password.
+    - Authentication using hard-coded username and password combinations.
+    - Secure handling of user credentials and validation of login inputs.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Teacher Portal Home & Student Listing Screen:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    - Home screen serving as the landing page and student listing.
+    - Display of student list with Name, Subject Name, and Marks.
+    - Efficient state management using Redux.
+    - Smooth rendering and performance optimization, including dealing with large datasets.
 
-## Learn More
+3. New Student Entry:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    - Feature for adding details of a new student using a popup/modal.
+    - Form validation for data integrity.
+    - Utilization of React hooks for managing form state.
+    - Update marks for existing students if a matching record is found.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. Extra Features:
 
-### Code Splitting
+    - Code splitting for optimized loading.
+    - Search functionality for finding students.
+    - React lazy loading for improved performance.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Technologies Used
 
-### Analyzing the Bundle Size
+    - React.js
+    - React Router
+    - Redux
+    - Material-UI
+    - React Lazy Load
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Folder Structure
+teacherportal/
+  ├── public/
+  ├── src/
+  │   ├── components/
+  │   │   ├── Login/
+  │   │   ├── Home/
+  │   │   ├── Error/
+  │   │   ├── Modal/
+  │   ├── redux/
+  │   │   ├── actions/
+  │   │   ├── reducers/
+  │   │   ├── store/
+  │   ├── App.js
+  │   ├── index.js
+  ├── package.json
+  ├── README.md
 
-### Making a Progressive Web App
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Contributions are welcome! Feel free to open an issue or submit a pull request for any improvements or additional features you'd like to see.
 
-### Advanced Configuration
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the [MIT License](LICENSE).

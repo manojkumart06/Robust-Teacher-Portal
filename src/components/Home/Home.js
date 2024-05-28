@@ -87,6 +87,7 @@ const Home = () => {
            tailwebs.
         </a>
         <div className='search-container'>
+        <img src='https://cdn-icons-png.flaticon.com/128/15665/15665930.png' alt='search'/>
         <TextField 
           variant="outlined"
           fullWidth
