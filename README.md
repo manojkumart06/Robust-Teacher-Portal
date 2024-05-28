@@ -8,7 +8,7 @@ This project aims to create a robust teacher portal using React.js, providing fe
 - [Usage](#usage)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Live Demo](#Live Demo)
+- [Live Demo](#LiveDemo)
 - [Contributing](#contributing)
 - [License](#license)
 
