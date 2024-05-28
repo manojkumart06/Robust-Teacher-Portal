@@ -1,0 +1,62 @@
+
+h1.title {
+    color: rgb(234, 10, 10);
+    text-decoration: none;
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    text-align: center;
+}
+
+.login-container {
+    background-color: white;
+    position: absolute;
+    top: 1%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    text-align: center;
+}
+
+.login-container .username-label {
+    margin: 0 310px -10px 0;
+}
+
+.login-container .password-label {
+    margin: -15px 310px -10px 0;
+}
+
+.login-container .input-field {
+    border-radius: 1px;
+    width: 70%;
+}
+
+.input-root {
+    height: 40px;
+    border-radius: 1px;
+}
+
+.input-start-adornment {
+    margin-right: 5px;
+}
+
+.horizontal-rule-icon {
+    transform: rotate(90deg);
+    opacity: 0.5;
+}
+
+.login-container .forgot-password-link {
+    color: #329BFA;
+    margin-left: 280px;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.login-container .login-button {
+    border-radius: 1px;
+    width: 45%;
+    height: 50px;
+    background-color: black;
+    text-transform: none;
+    margin-top: 50px;
+}

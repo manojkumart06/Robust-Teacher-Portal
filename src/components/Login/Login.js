@@ -23,6 +23,7 @@ const Login = () => {
     { username: 'user3', password: 'password3' },
   ];
 
+  // useEffect to populate fields if stored in localStorage
   useEffect(() => {
     const storedUsername = localStorage.getItem('username');
     const storedPassword = localStorage.getItem('password');
@@ -32,11 +33,13 @@ const Login = () => {
     }
   }, []);
 
+   // Handler for login button click
   const handleLogin = (e) => {
     e.preventDefault();
     if (validate()) {
       const user = users.find(user => user.username === username && user.password === password);
       if (user) {
+        // Store credentials in localStorage
         localStorage.setItem('username', username);
         localStorage.setItem('password', password);
         toast.success('Login successful!');
@@ -47,6 +50,7 @@ const Login = () => {
     }
   };
 
+  // Validate inputs
   const validate = () => {
     if (!username) {
       setError('Please Enter Username');
@@ -59,13 +63,14 @@ const Login = () => {
     return true;
   };
 
+  // Toggle password visibility
   const handleClickShowPassword = () => {
     setShowPassword(!showPassword);
   };
 
   return (
     <>
-      <h1>tailwebs.</h1>
+      <h1 className='title'>tailwebs.</h1>
       <Container className='login-container' maxWidth="sm">
         <Box
           display="flex"
@@ -75,41 +80,41 @@ const Login = () => {
           minHeight="50vh"
         >
           <Box width="100%" mb={2}>
-            <Typography variant="body1" style={{ marginRight: '370px', marginBottom: '-10px' }}>Username</Typography>
+            <Typography variant="body1" className="username-label">Username</Typography>
             <TextField
               variant="outlined"
               margin="normal"
               fullWidth
-              style={{ width: '80%' }}
+              className="input-field"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               InputProps={{
-                style: { height: '40px', borderRadius: '1px' },
+                classes: { root: 'input-root', startAdornment: 'input-start-adornment' },
                 startAdornment: (
                   <InputAdornment position="start">
                     <PersonOutlineIcon />
-                    <HorizontalRuleIcon style={{ transform: 'rotate(90deg)', opacity: '0.5' }} />
+                    <HorizontalRuleIcon className="horizontal-rule-icon" />
                   </InputAdornment>
                 ),
               }}
             />
           </Box>
           <Box width="100%" mb={2}>
-            <Typography variant="body1" style={{ margin: '-15px 370px -10px 0' }}>Password</Typography>
+            <Typography variant="body1" className="password-label">Password</Typography>
             <TextField
               variant="outlined"
               type={showPassword ? 'text' : 'password'}
               margin="normal"
               fullWidth
-              style={{ width: '80%' }}
+              className="input-field"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               InputProps={{
-                style: { height: '40px', borderRadius: '1px' },
+                classes: { root: 'input-root', startAdornment: 'input-start-adornment' },
                 startAdornment: (
                   <InputAdornment position="start">
                     <LockOpenIcon />
-                    <HorizontalRuleIcon style={{ transform: 'rotate(90deg)', opacity: '0.5' }} />
+                    <HorizontalRuleIcon className="horizontal-rule-icon" />
                   </InputAdornment>
                 ),
                 endAdornment: (
@@ -131,7 +136,7 @@ const Login = () => {
               {error}
             </Typography>
           )}
-          <Link href="#" variant="body2" style={{ color: '#329BFA', marginLeft: '330px', textDecoration: 'none', fontWeight: '400' }}>
+          <Link href="#" variant="body2" className="forgot-password-link">
             Forgot password?
           </Link>
           <Button
@@ -139,7 +144,7 @@ const Login = () => {
             color="primary"
             onClick={handleLogin}
             fullWidth
-            style={{ width: '45%', height: '50px', backgroundColor: 'black', textTransform: 'none', marginTop: '50px' }}
+            className="login-button"
           >
             Login
           </Button>
